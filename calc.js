@@ -40,8 +40,6 @@ $(function(){
 
     //this is for case 4
     if(number1!="" && op_array.length>1) {
-      console.log(num_array);
-      console.log('i am 3');
       num_array.push(number1);
       operator=op_array[0];
       answer=operate(operator);
@@ -54,21 +52,18 @@ $(function(){
      }
      //this is for case7
       else if(op_array.length==2)
-    {
-      console.log("i am 4");
+      {
       op_array.shift();
     }
     //this checks whether the user has clicked equal to sign or not
     //if yes, won't let empty string to be pushed on the num_array.
       else if (!equal_bool ){
-      console.log('I am 1')
       num_array.push(number1);
       number1="";
     }
 
     //this is for case 3
     else if(equal_bool && case3){
-      console.log('i am 2');
       num_array=[];
       num_array.push(number1);
       number1="";
@@ -81,7 +76,6 @@ $(function(){
     op_array=[];
     answer="";
     $('#display').val('');
-
   });
 
   $('#equalsButton').click(function(){
@@ -113,7 +107,6 @@ $(function(){
 
     //if the user has not pressed any operator case 6 first part
     else if(op_array.length==0){
-      console.log("i am here2!");
       answer=number1;
       num_array.push(answer);
       operator="";
@@ -154,5 +147,4 @@ $(function(){
     }
     return answer;
   }
-  
 });
